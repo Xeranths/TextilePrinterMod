@@ -6,7 +6,7 @@
 	</supportedVersions>
 	<description>v0.1.0
 A mod adding a factory to print textiles, like synthread, and with further research, leather or thrumbofur.
-Also adding a noew neutroamine generator.</description>
+Also adding a new neutroamine generator.</description>
 	<packageId>Herebus.TextilesPrinter</packageId>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
