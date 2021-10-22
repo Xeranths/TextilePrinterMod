@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <!-- Base of all recipes of textiles and leather -->
+
+  <RecipeDef Name="CreateTextile" Abstract="True">
+    <jobString>Create an organic textile from organic.</jobString>
+    <workAmount>250</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>           
+    <soundWorking>BiosculpterPod_Operating</soundWorking>		
+    <targetCountAdjustment>20</targetCountAdjustment>
+    <unfinishedThingDef>UnfinishedTextilePrinting</unfinishedThingDef>
+    <recipeUsers>
+      <li>TextilePrinter</li>
+    </recipeUsers>
+  </RecipeDef>
+
+ <!-- Unfinished printing (shouldn't leave the printer) -->
+
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>UnfinishedTextilePrinting</defName>
+    <label>unfinished textile printing</label>
+    <description>An unfinished printing protocole (shouldn't leave table for realistic reasons --').</description>
+    <statBases>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedTextilePrinting</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3.5,3)</drawSize>
+    </graphicData>
+    <stuffCategories Inherit="false" /> 
+    <alwaysHaulable>false</alwaysHaulable>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+   <!-- Abstracts of recipes for textiles w organic then wood, then leather (same order) -->
+
+  <RecipeDef Name="CreateTextileFromOrganic" ParentName="CreateTextile" Abstract="True">
+    <jobString>Synthetizing textile from organic.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+	    <categories>
+		<li>PlantMatter</li>
+		<li>Foods</li>
+	    </categories>
+	    <disallowedCategories>
+                <li>FoodMeals</li>
+            </disallowedCategories>
+        </filter>
+        <count>9</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+	<categories>
+	    <li>PlantMatter</li>
+	    <li>Foods</li>
+	</categories>
+	<disallowedCategories>
+            <li>FoodMeals</li>
+        </disallowedCategories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>MeatRaw</li>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+    </defaultIngredientFilter>
+  </RecipeDef>
+
+
+  <RecipeDef Name="CreateTextileFromWood" ParentName="CreateTextile" Abstract="True">
+    <jobString>Synthetizing textile from wood.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+	    <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>70</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef Name="CreateLeatherFromOrganic" ParentName="CreateTextile" Abstract="True">
+    <jobString>Synthetizing leather from organic.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+	    <categories>
+		<li>PlantMatter</li>
+		<li>Foods</li>
+	    </categories>
+	    <disallowedCategories>
+                <li>FoodMeals</li>
+            </disallowedCategories>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+	    <categories>
+		<li>MeatRaw</li>
+	    </categories>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+	<categories>
+	    <li>PlantMatter</li>
+	    <li>Foods</li>
+	</categories>
+	<disallowedCategories>
+            <li>FoodMeals</li>
+        </disallowedCategories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+    </defaultIngredientFilter>
+    <researchPrerequisite>TextilePrinterResearchAdv</researchPrerequisite>
+  </RecipeDef>
+
+	<!-- Recipes of textiles (not synthetics ones) -->
+
+  <RecipeDef ParentName="CreateTextileFromOrganic">
+    <defName>Make_DevilstrandFromOrganic</defName>
+    <label>make devilstrand from organic</label>
+    <description>Synthetize atoms from organic into Devilstrand.</description>
+    <products>
+      <DevilstrandCloth>75</DevilstrandCloth>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateTextileFromWood">
+    <defName>Make_DevilstrandFromWood</defName>
+    <label>make devilstrand from wood</label>
+    <description>Synthetize atoms from wood logs into Devilstrand.</description>
+    <products>
+      <DevilstrandCloth>75</DevilstrandCloth>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateTextileFromOrganic">
+    <defName>Make_ClothFromOrganic</defName>
+    <label>make cloth from organic</label>
+    <description>Synthetize atoms from organic into Cloth.</description>
+    <products>
+      <Cloth>120</Cloth>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateTextileFromWood">
+    <defName>Make_ClothFromWood</defName>
+    <label>make cloth from wood</label>
+    <description>Synthetize atoms from wood logs into cloth.</description>
+    <products>
+      <Cloth>120</Cloth>
+    </products>
+  </RecipeDef>
+
+	<!-- Recipes of leathers -->
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_LightleatherFromOrganic</defName>
+    <label>make light leather from organic</label>
+    <description>Synthetize atoms from organic into Lightleather.</description>
+    <products>
+      <Leather_Light>75</Leather_Light>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_BirdskinFromOrganic</defName>
+    <label>make birdskin from organic</label>
+    <description>Synthetize atoms from organic into Birdskin.</description>
+    <products>
+      <Leather_Bird>45</Leather_Bird>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_PigskinFromOrganic</defName>
+    <label>make pigskin from organic</label>
+    <description>Synthetize atoms from organic into Pigskin.</description>
+    <products>
+      <Leather_Pig>45</Leather_Pig>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_PlainLeatherFromOrganic</defName>
+    <label>make plain leather from organic</label>
+    <description>Synthetize atoms from organic into Plain Leather.</description>
+    <products>
+      <Leather_Plain>70</Leather_Plain>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_DogLeatherFromOrganic</defName>
+    <label>make dog leather from organic</label>
+    <description>Synthetize atoms from organic into Dog Leather.</description>
+    <products>
+      <Leather_Dog>65</Leather_Dog>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_CamelhideFromOrganic</defName>
+    <label>make camelhide from organic</label>
+    <description>Synthetize atoms from organic into Camelhide.</description>
+    <products>
+      <Leather_Camel>65</Leather_Camel>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_ChinchillaFurFromOrganic</defName>
+    <label>make chinchilla fur from organic</label>
+    <description>Synthetize atoms from organic into Chinchilla Fur.</description>
+    <products>
+      <Leather_Chinchilla>50</Leather_Chinchilla>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_FoxfurFromOrganic</defName>
+    <label>make foxfur from organic</label>
+    <description>Synthetize atoms from organic into Foxfur.</description>
+    <products>
+      <Leather_Fox>60</Leather_Fox>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_BluefurFromOrganic</defName>
+    <label>make bluefur from organic</label>
+    <description>Synthetize atoms from organic into Bluefur.</description>
+    <products>
+      <Leather_Bluefur>60</Leather_Bluefur>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_LizardskinFromOrganic</defName>
+    <label>make lizardskin from organic</label>
+    <description>Synthetize atoms from organic into Lizardskin.</description>
+    <products>
+      <Leather_Lizard>65</Leather_Lizard>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_HumanLeatherFromOrganic</defName>
+    <label>make light leather from organic</label>
+    <description>Synthetize atoms from organic into Human Leather.</description>
+    <products>
+      <Leather_Human>60</Leather_Human>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_WolfskinFromOrganic</defName>
+    <label>make wolfskin from organic</label>
+    <description>Synthetize atoms from organic into Wolfskin.</description>
+    <products>
+      <Leather_Wolf>45</Leather_Wolf>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_RhinocerosLeatherFromOrganic</defName>
+    <label>make rhinoceros leather from organic</label>
+    <description>Synthetize atoms from organic into Rhinoceros leather.</description>
+    <products>
+      <Leather_Rhinoceros>40</Leather_Rhinoceros>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_ElephantLeatherFromOrganic</defName>
+    <label>make elephant leather from organic</label>
+    <description>Synthetize atoms from organic into Elephant Leather.</description>
+    <products>
+      <Leather_Elephant>45</Leather_Elephant>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_HeavyFurFromOrganic</defName>
+    <label>make heavy fur leather from organic</label>
+    <description>Synthetize atoms from organic into Heavy fur.</description>
+    <products>
+      <Leather_Heavy>45</Leather_Heavy>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_BearskinFromOrganic</defName>
+    <label>make bearskin from organic</label>
+    <description>Synthetize atoms from organic into Bearskin.</description>
+    <products>
+      <Leather_Bear>45</Leather_Bear>
+    </products>
+  </RecipeDef>
+
+
+
+		<!-- Laine -->
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_AlpacaWoolFromOrganic</defName>
+    <label>make alpaca wool from organic</label>
+    <description>Synthetize atoms from organic into Alpaca wool.</description>
+    <products>
+      <WoolAlpaca>200</WoolAlpaca>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_BisonWoolFromOrganic</defName>
+    <label>make bison wool from organic</label>
+    <description>Synthetize atoms from organic into Bison wool.</description>
+    <products>
+      <WoolBison>200</WoolBison>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_MegaslothWoolFromOrganic</defName>
+    <label>make megasloth wool from organic</label>
+    <description>Synthetize atoms from organic into Megasloth wool.</description>
+    <products>
+      <WoolMegasloth>200</WoolMegasloth>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_MuffaloWoolFromOrganic</defName>
+    <label>make muffalo wool from organic</label>
+    <description>Synthetize atoms from organic into Muffalo wool.</description>
+    <products>
+      <WoolMuffalo>200</WoolMuffalo>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateLeatherFromOrganic">
+    <defName>Make_SheepWoolFromOrganic</defName>
+    <label>make sheep wool from organic</label>
+    <description>Synthetize atoms from organic into Sheep wool.</description>
+    <products>
+      <WoolSheep>200</WoolSheep>
+    </products>
+  </RecipeDef>
+
+	<!-- Recipes of thumbrofur -->
+
+  <RecipeDef ParentName="CreateTextile">
+    <defName>Make_ThrumboLeatherFromOrganic</defName>
+    <jobString>Synthetizing leather thumbrofur from organic.</jobString>
+    <label>make thrumbofur from organic</label>
+    <description>Synthetize atoms from organic into Thrumbofur. Due to the special structure of thrumbofur, the printer need a DNA sample</description>
+    <ingredients>
+      <li>
+        <filter>
+	    <categories>
+		<li>PlantMatter</li>
+		<li>Foods</li>
+	    </categories>
+	    <disallowedCategories>
+                <li>FoodMeals</li>
+            </disallowedCategories>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+	    <thingDefs>
+		<li>Meat_Thrumbo</li>
+	    </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+	<categories>
+	    <li>PlantMatter</li>
+	    <li>Foods</li>
+	</categories>
+	<disallowedCategories>
+            <li>FoodMeals</li>
+        </disallowedCategories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <disallowedCategories>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+    </defaultIngredientFilter>
+    <products>
+      <Leather_Thrumbo>50</Leather_Thrumbo>
+    </products>
+    <researchPrerequisite>TextilePrinterResearchAdv</researchPrerequisite>
+  </RecipeDef>
+
+
+	<!-- Recipes of textiles (synthetics ones) -->
+
+  <RecipeDef ParentName="CreateTextile">
+    <defName>Make_Synthread</defName>
+    <label>make synthread from neutroamine</label>
+    <description>Raffine neutroamine into Synthread.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+	    <li>Neutroamine</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Neutroamine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Synthread>75</Synthread>
+    </products>
+    <researchPrerequisite>TextilePrinterResearch</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CreateTextile">
+    <defName>Make_Hyperweave</defName>
+    <label>make hyperweave from neutroamine and plasteel</label>
+    <description>Raffine neutroamine and Plasteel into Hyperweave. Need to concentrate neutroamine more than Synthread,giving the dark blue color.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+	    <li>Neutroamine</li>
+          </thingDefs>
+        </filter>
+        <count>65</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+	    <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>35</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Neutroamine</li>
+        <li>Plasteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Hyperweave>75</Hyperweave>
+    </products>
+    <researchPrerequisite>TextilePrinterResearch</researchPrerequisite>
+  </RecipeDef>
+
+</Defs>
+
+<!--faire 2 abstract qui heritent de CreateTextile, 1pr orga 1pr wood ? (wwod doit etre separe, pas de foodvalue) -->
+<!--faire en sorte que cuir avec meat necessaire, et pour thumbro forcé d'avoir thumbromeat -->

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <WorkGiverDef>
+    <defName>DoBillsTextilePrinter</defName>
+    <label>print things at textile printer</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>75</priorityInType>
+    <fixedBillGiverDefs>
+	<li>TextilePrinter</li>
+    </fixedBillGiverDefs>
+    <verb>print textile</verb>
+    <gerund>printing textiles</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+</Defs>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>TextilePrinterResearch</defName>
+    <label>Basic Textile Printing</label>
+    <description>Basic textile printing, for hyperweave, synthread, and others.</description>
+    <tab>TextilePrinterTab</tab>
+    <baseCost>3500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>Machining</li>
+    </hiddenPrerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>TextilePrinterResearchAdv</defName>
+    <label>Avanced Textile Printing</label>
+    <description>Allow the impression of biologics textiles/others, using a bit of meat for DNA, as model.</description>
+    <tab>TextilePrinterTab</tab>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>TextilePrinterResearch</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+	<li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+  </ResearchProjectDef>
+</Defs>
