@@ -327,7 +327,7 @@
 
 
 
-		<!-- Laine -->
+		<!-- Wool -->
   <RecipeDef ParentName="CreateLeatherFromOrganic">
     <defName>Make_AlpacaWoolFromOrganic</defName>
     <label>make alpaca wool from organic</label>
@@ -377,7 +377,7 @@
 
   <RecipeDef ParentName="CreateTextile">
     <defName>Make_ThrumboLeatherFromOrganic</defName>
-    <jobString>Synthetizing leather thumbrofur from organic.</jobString>
+    <jobString>Synthetizing leather thrumbofur from organic.</jobString>
     <label>make thrumbofur from organic</label>
     <description>Synthetize atoms from organic into Thrumbofur. Due to the special structure of thrumbofur, the printer need a DNA sample</description>
     <ingredients>
@@ -488,6 +488,3 @@
   </RecipeDef>
 
 </Defs>
-
-<!--faire 2 abstract qui heritent de CreateTextile, 1pr orga 1pr wood ? (wwod doit etre separe, pas de foodvalue) -->
-<!--faire en sorte que cuir avec meat necessaire, et pour thumbro forcé d'avoir thumbromeat -->
