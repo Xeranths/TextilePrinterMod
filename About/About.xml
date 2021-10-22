@@ -6,7 +6,7 @@
 	</supportedVersions>
 	<description>v0.1.0
 A mod adding a factory to print textiles, like synthread, and with further research, leather or thrumbofur.</description>
-	<packageId>Herebus.TextilePrinter</packageId>
+	<packageId>Herebus.TextilesPrinter</packageId>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Royalty</li>
