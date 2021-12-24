@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				      <value>
+
+					<!-- Recipes of gallatross -->
+
+  					<RecipeDef ParentName="CreateTextile">
+   					 <defName>Make_LeatherGallatrossFromOrganic</defName>
+   					 <jobString>Synthetizing gallatross leather from organic.</jobString>
+   					 <label>make gallatross leather from organic</label>
+   					 <description>Synthetize atoms from organic into Gallatross leather. Due to the special structure of thrumbofur, the printer need a DNA sample</description>
+   					 <ingredients>
+   					   <li>
+      					   <filter>
+	  				   <categories>
+					   <li>PlantMatter</li>
+					   <li>Foods</li>
+	  				   </categories>
+	 				   <disallowedCategories>
+          				      <li>FoodMeals</li>
+        				   </disallowedCategories>
+      					   </filter>
+     					   <count>15</count>
+     					   </li>
+					   <li>
+      					    <filter>
+	    				    <thingDefs>
+						<li>Meat_AA_Gallatross</li>
+	    				    </thingDefs>
+      					    </filter>
+       					    <count>5</count>
+   					    </li>
+  					  </ingredients>
+    					  <fixedIngredientFilter>
+					    <categories>
+	  				      <li>PlantMatter</li>
+					      <li>Foods</li>
+					    </categories>
+					    <disallowedCategories>
+        				       <li>FoodMeals</li>
+      					    </disallowedCategories>
+  					  </fixedIngredientFilter>
+  					  <defaultIngredientFilter>
+     					    <categories>
+     					     <li>FoodRaw</li>
+    					    </categories>
+     					  <disallowedCategories>
+      					    <li>AnimalProductRaw</li>
+    					  </disallowedCategories>
+   					  </defaultIngredientFilter>
+   					  <products>
+    					    <Leather_Gallatross>50</Leather_Gallatross>
+   					  </products>
+   					  <researchPrerequisite>TextilePrinterResearchAdv</researchPrerequisite>
+  					</RecipeDef>
+
+  				   </value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

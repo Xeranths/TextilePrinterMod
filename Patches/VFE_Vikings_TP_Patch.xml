@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Vikings</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				      <value>
+
+					<!-- Recipes of fenrir -->
+
+  					<RecipeDef ParentName="CreateTextile">
+   					 <defName>Make_LeatherFenrirFromOrganic</defName>
+   					 <jobString>Synthetizing fenrir skin from organic.</jobString>
+   					 <label>make fenrir skin from organic</label>
+   					 <description>Synthetize atoms from organic into Fenrir skin. Due to the special structure of the Fenrir skin, the printer need a DNA sample</description>
+   					 <ingredients>
+   					   <li>
+      					   <filter>
+	  				   <categories>
+					   <li>PlantMatter</li>
+					   <li>Foods</li>
+	  				   </categories>
+	 				   <disallowedCategories>
+          				      <li>FoodMeals</li>
+        				   </disallowedCategories>
+      					   </filter>
+     					   <count>15</count>
+     					   </li>
+					   <li>
+      					    <filter>
+	    				    <thingDefs>
+						<li>Meat_VFEV_Fenrir</li>
+	    				    </thingDefs>
+      					    </filter>
+       					    <count>5</count>
+   					    </li>
+  					  </ingredients>
+    					  <fixedIngredientFilter>
+					    <categories>
+	  				      <li>PlantMatter</li>
+					      <li>Foods</li>
+					    </categories>
+					    <disallowedCategories>
+        				       <li>FoodMeals</li>
+      					    </disallowedCategories>
+  					  </fixedIngredientFilter>
+  					  <defaultIngredientFilter>
+     					    <categories>
+     					     <li>FoodRaw</li>
+    					    </categories>
+     					  <disallowedCategories>
+      					    <li>AnimalProductRaw</li>
+    					  </disallowedCategories>
+   					  </defaultIngredientFilter>
+   					  <products>
+    					    <VFEV_Leather_Fenrir>50</VFEV_Leather_Fenrir>
+   					  </products>
+   					  <researchPrerequisite>TextilePrinterResearchAdv</researchPrerequisite>
+  					</RecipeDef>
+  				   </value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				      <value>
+
+					<!-- Recipes of lothurr -->
+
+  					<RecipeDef ParentName="CreateTextile">
+   					 <defName>Make_LeatherLothurrFromOrganic</defName>
+   					 <jobString>Synthetizing lothurr leather from organic.</jobString>
+   					 <label>make lothurr leather from organic</label>
+   					 <description>Synthetize atoms from organic into Lothurr leather. Due to the special structure of the Lothurr leather, the printer need a DNA sample</description>
+   					 <ingredients>
+   					   <li>
+      					   <filter>
+	  				   <categories>
+					   <li>PlantMatter</li>
+					   <li>Foods</li>
+	  				   </categories>
+	 				   <disallowedCategories>
+          				      <li>FoodMeals</li>
+        				   </disallowedCategories>
+      					   </filter>
+     					   <count>15</count>
+     					   </li>
+					   <li>
+      					    <filter>
+	    				    <thingDefs>
+						<li>Meat_VFEV_Lothurr</li>
+	    				    </thingDefs>
+      					    </filter>
+       					    <count>5</count>
+   					    </li>
+  					  </ingredients>
+    					  <fixedIngredientFilter>
+					    <categories>
+	  				      <li>PlantMatter</li>
+					      <li>Foods</li>
+					    </categories>
+					    <disallowedCategories>
+        				       <li>FoodMeals</li>
+      					    </disallowedCategories>
+  					  </fixedIngredientFilter>
+  					  <defaultIngredientFilter>
+     					    <categories>
+     					     <li>FoodRaw</li>
+    					    </categories>
+     					  <disallowedCategories>
+      					    <li>AnimalProductRaw</li>
+    					  </disallowedCategories>
+   					  </defaultIngredientFilter>
+   					  <products>
+    					    <VFEV_Leather_Lothurr>50</VFEV_Leather_Lothurr>
+   					  </products>
+   					  <researchPrerequisite>TextilePrinterResearchAdv</researchPrerequisite>
+  					</RecipeDef>
+  				   </value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				      <value>
+
+					<!-- Recipes of njorun -->
+
+  					<RecipeDef ParentName="CreateTextile">
+   					 <defName>Make_LeatherNjorunFromOrganic</defName>
+   					 <jobString>Synthetizing njorun leather from organic.</jobString>
+   					 <label>make njorun leather from organic</label>
+   					 <description>Synthetize atoms from organic into Njorun leather. Due to the special structure of the Njorun leather, the printer need a DNA sample</description>
+   					 <ingredients>
+   					   <li>
+      					   <filter>
+	  				   <categories>
+					   <li>PlantMatter</li>
+					   <li>Foods</li>
+	  				   </categories>
+	 				   <disallowedCategories>
+          				      <li>FoodMeals</li>
+        				   </disallowedCategories>
+      					   </filter>
+     					   <count>15</count>
+     					   </li>
+					   <li>
+      					    <filter>
+	    				    <thingDefs>
+						<li>Meat_VFEV_Njorun</li>
+	    				    </thingDefs>
+      					    </filter>
+       					    <count>5</count>
+   					    </li>
+  					  </ingredients>
+    					  <fixedIngredientFilter>
+					    <categories>
+	  				      <li>PlantMatter</li>
+					      <li>Foods</li>
+					    </categories>
+					    <disallowedCategories>
+        				       <li>FoodMeals</li>
+      					    </disallowedCategories>
+  					  </fixedIngredientFilter>
+  					  <defaultIngredientFilter>
+     					    <categories> 
+     					     <li>FoodRaw</li>
+    					    </categories>
+     					  <disallowedCategories>
+      					    <li>AnimalProductRaw</li>
+    					  </disallowedCategories>
+   					  </defaultIngredientFilter>
+   					  <products>
+    					    <VFEV_Leather_Njorun>50</VFEV_Leather_Njorun>
+   					  </products>
+   					  <researchPrerequisite>TextilePrinterResearchAdv</researchPrerequisite>
+  					</RecipeDef>
+  				   </value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				      <value>
+
+					<!-- Recipes of wooly cow -->
+
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_CowWoolFromOrganic</defName>
+							<label>make cow wool from organic</label>
+							<description>Synthetize atoms from organic into cow wool.</description>
+							<products>
+								<VFEV_WoolCow>200</VFEV_WoolCow>
+							</products>
+						</RecipeDef>
+  				   </value>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+</Patch>
