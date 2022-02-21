@@ -17,7 +17,7 @@
    					 <defName>Make_LeatherGallatrossFromOrganic</defName>
    					 <jobString>Synthetizing gallatross leather from organic.</jobString>
    					 <label>make gallatross leather from organic</label>
-   					 <description>Synthetize atoms from organic into Gallatross leather. Due to the special structure of thrumbofur, the printer need a DNA sample</description>
+   					 <description>Synthetize atoms from organic into Gallatross leather. The reproduction of the leather of this mighty creature need a DNA sample</description>
    					 <ingredients>
    					   <li>
       					   <filter>
@@ -65,6 +65,298 @@
 
   				   </value>
 				</li>
+				
+				<!--  insects chitins -->
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_AerofleetLeatherFromOrganic</defName>
+							<label>make aerofleet leather from organic</label>
+							<description>Synthetize atoms from organic into Aerofleet leather.</description>
+							<products>
+								<AA_Leather_Aerofleet>75</AA_Leather_Aerofleet>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_ArcticLionLeatherFromOrganic</defName>
+							<label>make arctic lion leather from organic</label>
+							<description>Synthetize atoms from organic into Arctic Lion leather.</description>
+							<products>
+								<AA_ArcticLion_Leather>75</AA_ArcticLion_Leather>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_SandLionLeatherFromOrganic</defName>
+							<label>make sand lion leather from organic</label>
+							<description>Synthetize atoms from organic into Sand Lion leather.</description>
+							<products>
+								<AA_SandLion_Leather>75</AA_SandLion_Leather>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_ChitinFromOrganic</defName>
+							<label>make chitin from organic</label>
+							<description>Synthetize atoms from organic into chitin. Consume more due to the structure of the chitin.</description>
+							<products>
+								<Leather_Chitin>45</Leather_Chitin>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateTextile">
+							<defName>Make_IronChitinFromOrganic</defName>
+							<label>make iron chitin from organic and steel</label>
+							<description>Synthetize atoms from organic into Iron Chitin. Consume a lot for a few products, and cost steel.</description>
+							<jobString>Synthetizing leather\wool from organic.</jobString>
+							<researchPrerequisite>TextilePrinterResearchAdv</researchPrerequisite>
+							<ingredients>
+								<li>
+									<filter>
+										<categories>
+											<li>PlantMatter</li>
+											<li>Foods</li>
+										</categories>
+										<disallowedCategories>
+											<li>FoodMeals</li>
+										</disallowedCategories>
+									</filter>
+									<count>20</count>
+								</li>
+								<li>
+									<filter>
+										<thingDefs>
+											<li>Steel</li>
+										</thingDefs>
+									</filter>
+									<count>10</count>
+								</li>
+								</ingredients>
+								<fixedIngredientFilter>
+									<categories>
+										<li>PlantMatter</li>
+										<li>Foods</li>
+									</categories>
+									<thingDefs>
+										<li>Steel</li>
+									</thingDefs>
+									<disallowedCategories>
+										<li>FoodMeals</li>
+									</disallowedCategories>
+								</fixedIngredientFilter>
+								<defaultIngredientFilter>
+									<categories>
+										<li>FoodRaw</li>
+									</categories>
+									<thingDefs>
+										<li>Steel</li>
+									</thingDefs>
+									<disallowedCategories>
+										<li>AnimalProductRaw</li>
+									</disallowedCategories>
+								</defaultIngredientFilter>
+							<products>
+								<Leather_IronChitin>45</Leather_IronChitin>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_RaptorPlatesFromOrganic</defName>
+							<label>make raptor plates from organic</label>
+							<description>Synthetize atoms from organic into somes raptor's plates. Consume a lot, for few plates.</description>
+							<products>
+								<Leather_RaptorPlates>25</Leather_RaptorPlates>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_CactusLeatherFromOrganic</defName>
+							<label>make cactus leather from organic</label>
+							<description>Synthetize atoms from organic into cactus leather. The special structure of this plant-animal like isn't an obstacle to the printer, due to it's molecular reorganisation ability. However, it's not super cost efficient.</description>
+							<products>
+								<Leather_Cactus>60</Leather_Cactus>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_BlackChitinFromOrganic</defName>
+							<label>make black chitin from organic</label>
+							<description>Synthetize atoms from organic into black chitin. Due to the chitin structure, it need a lot of materials for some products.</description>
+							<products>
+								<Leather_BlackChitin>40</Leather_BlackChitin>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_NightLeatherFromOrganic</defName>
+							<label>make night leather from organic</label>
+							<description>Synthetize atoms from organic into night leather. A bit complex to reproduce, algorithms driving the printer are prone to waste a few resources.</description>
+							<products>
+								<Leather_Night>65</Leather_Night>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_ChameleonYakWoolTemperateFromOrganic</defName>
+							<label>make chameleon yak wool (temperate) from organic</label>
+							<description>Synthetize atoms from organic into chameleon yak wool, temperate variant.</description>
+							<products>
+								<AA_ChameleonYakWoolTemperate>150</AA_ChameleonYakWoolTemperate>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_ChameleonYakWoolWinterFromOrganic</defName>
+							<label>make chameleon yak wool (winter) from organic</label>
+							<description>Synthetize atoms from organic into chameleon yak wool, winter variant.</description>
+							<products>
+								<AA_ChameleonYakWoolWinter>150</AA_ChameleonYakWoolWinter>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_ChameleonYakWoolJungleFromOrganic</defName>
+							<label>make chameleon yak wool (jungle) from organic</label>
+							<description>Synthetize atoms from organic into chameleon yak wool, jungle variant.</description>
+							<products>
+								<AA_ChameleonYakWoolJungle>150</AA_ChameleonYakWoolJungle>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_ChameleonYakWoolDesertFromOrganic</defName>
+							<label>make chameleon yak wool (desert) from organic</label>
+							<description>Synthetize atoms from organic into chameleon yak wool, desert variant.</description>
+							<products>
+								<AA_ChameleonYakWoolDesert>150</AA_ChameleonYakWoolDesert>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_GreyCoatedMouflonWoolFromOrganic</defName>
+							<label>make grey coated mouflon wool from organic</label>
+							<description>Synthetize atoms from organic into grey coated mouflon wool. Easy to mass producte and simple, as the beast where it originally came from.</description>
+							<workAmount>100</workAmount>
+							<products>
+								<AA_GreyCoatedMouflonWool>25</AA_GreyCoatedMouflonWool>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_CinderSilkFromOrganic</defName>
+							<label>make cindersilk from organic</label>
+							<description>Synthetize atoms from organic into cindersilk. A particulary long and complex task for a high value product.</description>
+							<workAmount>1600</workAmount>
+							<products>
+								<AA_CinderSilk>50</AA_CinderSilk>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_MothSilkFromOrganic</defName>
+							<label>make moth silk from organic</label>
+							<description>Synthetize atoms from organic into moth silk. A complex task to handle, as all silks, for an expensive material.</description>
+							<workAmount>1400</workAmount>
+							<products>
+								<AA_MothSilk>75</AA_MothSilk>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+				   <xpath>Defs</xpath>
+				    <value>
+						<RecipeDef ParentName="CreateLeatherFromOrganic">
+							<defName>Make_GiantCrownedSilkieSilkFromOrganic</defName>
+							<label>make giant crowned silkie silk from organic</label>
+							<description>Synthetize atoms from organic into giant crowned silkie silk. A lot of failures, due to the sensibility of the silkie silk structure, but a product researched among the stars by tailors and traders.</description>
+							<workAmount>2400</workAmount>
+							<products>
+								<AA_GiantCrownedSilkieSilk>25</AA_GiantCrownedSilkieSilk>
+							</products>
+						</RecipeDef>
+					</value>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
