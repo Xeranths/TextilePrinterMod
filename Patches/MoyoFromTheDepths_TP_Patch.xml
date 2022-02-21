@@ -108,12 +108,18 @@
 								<xpath>Defs/RecipeDef[defName="Make_Depthweave"]/ingredients/li/filter/disallowedThingDefs</xpath>
 								<value>
 									<li>Leather_Gallatross</li>
+									<li>Leather_Chitin</li>
+									<li>Leather_BlackChitin</li>
+									<li>Leather_IronChitin</li>
 								</value>
 							</li>
 							<li Class="PatchOperationAdd">
 								<xpath>Defs/RecipeDef[defName="Make_Depthweave"]/fixedIngredientFilter/disallowedThingDefs</xpath>
 								<value>
 									<li>Leather_Gallatross</li>
+									<li>Leather_Chitin</li>
+									<li>Leather_BlackChitin</li>
+									<li>Leather_IronChitin</li>
 								</value>
 							</li>
 						</operations>
